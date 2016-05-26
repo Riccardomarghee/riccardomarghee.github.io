@@ -6,16 +6,7 @@
 </head>
 <body>
 <nav>
- nav {
-        position: fixed;
-        top: 0; left: 0; bottom: 0;
-        width: 288px;
-        margin: 0;
-        padding: 0;
-        background: #E6E6E6;
-        color: #6C7482;
-        overflow-y: scroll;
-}
+
  
 nav a { text-decoration: none; color: #6C7482; }
  <a href="#"><img id="logo" alt="logo" src="https://farm6.staticflickr.com/5565/15093842946_de52317ac2_o.png" width="240"></a>
@@ -39,5 +30,73 @@ nav a { text-decoration: none; color: #6C7482; }
  <a href="#"><li>Altro</li></a>
  </ul>
  </nav>
+ 
+  nav {
+        position: fixed;
+        top: 0; left: 0; bottom: 0;
+        width: 288px;
+        margin: 0;
+        padding: 0;
+        background: #E6E6E6;
+        color: #6C7482;
+        overflow-y: scroll;
+}
+ 
+ 
+
+
+
+
+
+ nav ul {
+        width: 288px;
+        height: 100%;
+        padding: 0;
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        list-style-type: none;
+}
+ 
+nav ul li {
+        color: #000;
+        width: 258px;
+        height: 35px;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 0;
+        padding-bottom: 0;
+        left: 0;
+        right: 0;
+        position: relative;
+}
+ 
+nav ul li:not(.active) {
+        background: #E6E6E6;
+        transition: left 0.5s, background 1s, color 1s;
+        -webkit-transition: left 0.5s, background 1s, color 1s;
+        -moz-transition: left 0.5s, background 1s, color 1s;
+        border-left: 10px solid #21D561;
+        padding-top: 10px;
+        left: -10px;
+}
+nav ul li.active {
+        width: 258px !important;
+        border-top: 0!important;
+        border-left: 10px solid #21D561;
+        background: #3B383B;
+        color: #FFF;
+}
+nav ul a:hover {
+        color: #FFF;
+}
+ 
+nav ul a:hover > li:not(.active) {
+        background: #3B383B;
+        left: 0px;
+        color: #FFF;
+}
 </body>
 </html>
